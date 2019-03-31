@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.amq.demo.sender;
 
 import javax.jms.JMSException;
@@ -12,12 +15,23 @@ import org.springframework.stereotype.Component;
 import com.amq.demo.configuration.MessagingConfiguration;
 import com.amq.demo.object.QueueObject;
 
+
+/**
+ * The Class MessageSender.
+ */
 @Component
 public class MessageSender {
 
+	/** The messaging configuration. */
 	@Autowired
 	MessagingConfiguration messagingConfiguration;
 
+	/**
+	 * Send message.
+	 *
+	 * @param object the object
+	 * @param queueName the queue name
+	 */
 	public void sendMessage(final QueueObject object, final String queueName) {
 		messagingConfiguration.jmsTemplate(queueName).send(new MessageCreator() {
 			@Override

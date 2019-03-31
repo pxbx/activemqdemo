@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package com.amq.demo.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +13,23 @@ import com.amq.demo.object.QueueObject;
 import com.amq.demo.senderservice.JMSSenderService;
 import com.amq.demo.util.ApplicationUtil;
 
+
+/**
+ * The Class ApplicationController.
+ */
 @RestController
 @RequestMapping("/application")
 public class ApplicationController {
 
+	/** The jms sender service. */
 	@Autowired
 	JMSSenderService jmsSenderService;
 
+	/**
+	 * Demo sendto Q 1.
+	 *
+	 * @return the string
+	 */
 	@GetMapping(value = "/demo1", produces = MediaType.APPLICATION_JSON_VALUE)
 	public String demoSendtoQ1() {
 		System.out.println("CALLING DEMO 1");
@@ -30,6 +43,11 @@ public class ApplicationController {
 		return "ENQUEUED -> ".concat("\n").concat(object.toString());
 	}
 
+	/**
+	 * Demo sendto Q 2.
+	 *
+	 * @return the string
+	 */
 	@GetMapping(value = "/demo2", produces = MediaType.APPLICATION_JSON_VALUE)
 	public String demoSendtoQ2() {
 		System.out.println("CALLING DEMO 2");
