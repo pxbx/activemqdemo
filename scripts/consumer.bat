@@ -1,0 +1,1 @@
+java -jar ..\ActiveMQConsumerApplication\target\ActiveMQConsumerApplication-0.0.1-SNAPSHOT.jar

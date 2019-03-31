@@ -1,1 +1,0 @@
-java -jar ActiveMQProducerApplication\target\ActiveMQProducerApplication-0.0.1-SNAPSHOT.jar

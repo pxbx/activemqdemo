@@ -13,8 +13,9 @@ call cd ..
 call cd ActiveMQProducerApplication  
 call mvn clean install  
 call cd ..  
-call timeout 20
+call cd scripts
 call start cmd /c producer.bat  
-call start cmd /c consumer.bat  
-call timeout 20
+call timeout 10
 call start cmd /c execute.bat
+call timeout 300
+call start cmd /c consumer.bat  
