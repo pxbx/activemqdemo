@@ -26,6 +26,6 @@ public class Queue02Receiver implements MessageReceiver {
 	@JmsListener(destination = "demo2")
 	public void receiveMessage(Message<QueueObject> message) throws JMSException {
 		QueueObject object = message.getPayload();
-		System.out.println("MESSAGE RECEIVED -> " + object);
+		System.out.println("MESSAGE RECEIVED FROM demo2 -> " + object);
 	}
 }
