@@ -11,7 +11,6 @@ import com.amq.demo.object.QueueObject;
  * The Class ApplicationUtil.
  */
 public class ApplicationUtil {
-
 	/**
 	 * Gets the id.
 	 *
@@ -27,7 +26,8 @@ public class ApplicationUtil {
 	 * @return the queue object
 	 */
 	public static QueueObject createQueueObject() {
-		QueueObject object = new QueueObject(getID(), "SOME MESSAGE");
+		String counter = "COUNTER IS NOW -> ".concat(Integer.toString(Counter.getNext()));
+		QueueObject object = new QueueObject(getID(), counter);
 		return object;
 	}
 
