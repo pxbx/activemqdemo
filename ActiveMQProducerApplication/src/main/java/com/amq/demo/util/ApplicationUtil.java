@@ -7,7 +7,6 @@ import java.util.UUID;
 
 import com.amq.demo.object.QueueObject;
 
-
 /**
  * The Class ApplicationUtil.
  */
@@ -28,9 +27,7 @@ public class ApplicationUtil {
 	 * @return the queue object
 	 */
 	public static QueueObject createQueueObject() {
-		QueueObject object = new QueueObject();
-		object.setId(getID());
-		object.setMessage("SOME MESSAGE");
+		QueueObject object = new QueueObject(getID(), "SOME MESSAGE");
 		return object;
 	}
 

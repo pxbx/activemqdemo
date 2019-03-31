@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<spring.version>4.3.0.RELEASE</spring.version>
+		<spring.version>4.3.18.RELEASE</spring.version>
 	</properties>
 
 	<dependencies>
@@ -38,9 +38,33 @@
 			<version>5.13.3</version>
 		</dependency>
 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.19</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-test</artifactId>
+			<version>1.5.19.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot</artifactId>
-			<version>1.5.2.RELEASE</version>
+			<version>1.5.19.RELEASE</version>
 		</dependency>
 	</dependencies>
 

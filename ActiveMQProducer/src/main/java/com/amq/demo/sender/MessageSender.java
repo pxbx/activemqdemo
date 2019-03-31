@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 import com.amq.demo.configuration.MessagingConfiguration;
 import com.amq.demo.object.QueueObject;
 
-
 /**
  * The Class MessageSender.
  */
@@ -29,7 +28,7 @@ public class MessageSender {
 	/**
 	 * Send message.
 	 *
-	 * @param object the object
+	 * @param object    the object
 	 * @param queueName the queue name
 	 */
 	public void sendMessage(final QueueObject object, final String queueName) {

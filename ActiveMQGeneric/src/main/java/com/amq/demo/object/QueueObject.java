@@ -6,6 +6,7 @@ package com.amq.demo.object;
 import java.io.Serializable;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class QueueObject.
  */
@@ -17,6 +18,18 @@ public class QueueObject implements Serializable {
 	@Override
 	public String toString() {
 		return "QueueObject [id=" + id + ", message=" + message + "]";
+	}
+
+	/**
+	 * Instantiates a new queue object.
+	 *
+	 * @param id the id
+	 * @param message the message
+	 */
+	public QueueObject(String id, Object message) {
+		super();
+		this.id = id;
+		this.message = message;
 	}
 
 	/** The Constant serialVersionUID. */
