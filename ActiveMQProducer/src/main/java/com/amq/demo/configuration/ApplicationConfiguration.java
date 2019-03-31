@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class ApplicationConfiguration {
 	
 	/** The broker URL. */
-	@Value("tcp://localhost:61616")
+	@Value("${application.configuration.activemq.url:http://some.dummy/burl}")
 	String brokerURL;
 
 	/**
